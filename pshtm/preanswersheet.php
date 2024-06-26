@@ -81,11 +81,12 @@ $training_program_id = $_GET['training_program_id'];
 
             while ($rowx = pg_fetch_assoc($result)) {
                 $answer = $rowx['pre_student_ans'];
+                $opt = $rowx['option'];
 
                 echo '
                 <div class="inpbx">
                     <label for="">' . $question . '</label>
-                    <p>Ans: ' . $answer . '</p>
+                    <p>Ans: '.$opt.') ' . $answer . '</p>
                 </div>
                 ';
             }

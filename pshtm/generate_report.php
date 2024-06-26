@@ -1,6 +1,4 @@
-<?php
-//insert into emp report select form emp and training enter pre and post marks
-?>
+
 <?php
 
 include('connect.php');
