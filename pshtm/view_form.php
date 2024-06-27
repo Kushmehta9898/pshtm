@@ -297,8 +297,10 @@ if (isset($_POST['submit'])) {
         while ($rowx = pg_fetch_assoc($res_qx)) {
             $preres = $rowx['questionnaire1_result'];
         }
-        $employee_performance = $preres - $correct;
+        // $employee_performance = $preres - $correct;
 
+        $total = count($qids);
+        $employee_performance = ($correct / $total) * 100;
 
         $insert = "INSERT INTO employee_reports (employee_performance, questionnaire2_result) 
         VALUES ('$empid', '$tr_id', '$employee_performance', '$correct') 
